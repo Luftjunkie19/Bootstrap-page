@@ -390,7 +390,7 @@
           aria-labelledby="pills-profile-tab"
           tabindex="0"
         >
-          <div class="row d-sm-block d-md-flex d-lg-flex g-3">
+          <div class="row d-block d-md-flex d-lg-flex g-3">
             <div class="col-lg-4 col-md-6 col-sm-12">
               <div class="card py-4 border-1" style="width: 20rem">
                 <div class="card-body">
@@ -508,34 +508,100 @@
     </div>
 
     <!--Gallery section slider-->
-    <div class="container" id="gallery">
+    <div class="container p-5" id="gallery">
       <p class="text-warning">Amet is samet</p>
       <h3 class="fw-bold">Gallery</h3>
 
-      <div class="row justify-content-between my-3 g-4">
-        <a
-          class="col-md-6 col-sm-12 col-lg-6 img-fluid"
-          href="/assets/Empire-Flippers-an-online-business-marketplace.webp"
-          data-toggle="lightbox"
-          data-gallery="photo-gallery"
+      <div class="d-flex justify-content-center align-items-center">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="true"
         >
-          <img
-            src="/assets/Empire-Flippers-an-online-business-marketplace.webp"
-            class="img-fluid"
-          />
-        </a>
-        <a
-          class="col-md-6 col-sm-12 col-lg-6 img-fluid"
-          href="/assets/og_de_stage_tv06275_home.jpg"
-          data-toggle="lightbox"
-          data-gallery="photo-gallery"
-        >
-          <img class="img-fluid" src="/assets/og_de_stage_tv06275_home.jpg" />
-        </a>
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner w-100">
+            <div class="carousel-item active">
+              <a
+                href="/assets/Empire-Flippers-an-online-business-marketplace.webp"
+                data-toggle="lightbox"
+                data-gallery="photo-gallery"
+              >
+                <img
+                  src="/assets/Empire-Flippers-an-online-business-marketplace.webp"
+                  class="d-block img-fluid"
+                />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a
+                href="/assets/og_de_stage_tv06275_home.jpg"
+                data-toggle="lightbox"
+                data-gallery="photo-gallery"
+              >
+                <img
+                  src="/assets/og_de_stage_tv06275_home.jpg"
+                  class="d-block img-fluid"
+                />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a
+                href="/assets/Yummy-bootstrap-website-template-md.webp"
+                data-toggle="lightbox"
+                data-gallery="photo-gallery"
+              >
+                <img
+                  src="/assets/Yummy-bootstrap-website-template-md.webp"
+                  class="d-block img-fluid"
+                />
+              </a>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
     </div>
 
     <!--Footer section-->
+
     <div
       class="container-fluid bg-dark p-5 d-flex flex-column flex-sm-column flex-md-column flex-lg-row justify-content-lg-around justify-content-md-between justify-content-sm-between align-items-center"
     >
