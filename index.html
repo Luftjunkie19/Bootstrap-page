@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap-Web Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,200;1,300;1,400;1,500;1,700;1,800&display=swap");
+
+      body {
+        font-family: "Karla", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .nav-pills {
+        border: 1px solid rgba(0, 0, 0, 0.444);
+        padding: 4px;
+        border-radius: 10px;
+      }
+
+      .nav-pills > .nav-item > .nav-link {
+        color: black;
+      }
+
+      .nav-pills > .nav-item > .nav-link.active {
+        background: #e28743;
+        color: white;
+      }
+
+      .orange {
+        color: #e28743;
+      }
+
+      .btn.btn-warning {
+        background: #e28743;
+        border: #e28743;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--Navbar-->
+    <nav
+      class="navbar position-sticky top-0 z-3 bg-light border-bottom border-3"
+    >
+      <div
+        class="container d-flex justify-content-lg-around justify-content-md-between justify-content-sm-between align-items-center"
+      >
+        <a href="#" class="navbar-brand">
+          <img
+            src="/assets/1648814513469-removebg-preview-removebg-preview.png"
+            alt="logo-img"
+            width="50"
+            height="50"
+          />
+        </a>
+
+        <div class="nav d-none d-sm-none d-md-none d-lg-flex">
+          <div class="dropdown">
+            <a
+              class="nav-link text-dark dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Link
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Home</a></li>
+              <li><a class="dropdown-item" href="#pricing">Hosting</a></li>
+              <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+            </ul>
+          </div>
+
+          <a class="nav-link text-dark" href="#">Link</a>
+          <a class="nav-link text-dark" href="#">Link</a>
+          <a class="nav-link text-dark" href="#">Link</a>
+          <a class="nav-link text-dark" href="#">Link</a>
+          <a class="nav-link text-dark" href="#">Link</a>
+          <a class="nav-link text-dark" href="#">Link</a>
+          <a class="nav-link text-dark" href="#"
+            ><i class="fa fa-search"></i
+          ></a>
+        </div>
+
+        <button
+          class="btn d-sm-block d-md-block d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+        >
+          <i class="fa fa-bars fa-2x"></i>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasRight"
+          aria-labelledby="offcanvasRightLabel"
+        >
+          <div class="offcanvas-header">
+            <div class="nav-brand">
+              <img
+                src="assets/1648814513469-removebg-preview-removebg-preview.png"
+                alt=""
+                width="50"
+                height="50"
+              />
+            </div>
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">adRescpect</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Link
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#pricing">Hosting</a></li>
+                <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+              </ul>
+            </div>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link"><i class="fa fa-search"></i> Search</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--Intro section-->
+    <div class="container my-5 p-3" id="intro-section">
+      <div class="row g-5">
+        <div
+          class="col-lg-3 col-md-4 col-sm-6 d-flex flex-column justify-content-center"
+        >
+          <h1 class="fw-bolder">Headline Awesome</h1>
+          <small>
+            Billions upon billions bits of moving fluff invent the universe
+            science rogue Rig Veda. Orion's sword rich in heavy atoms vanquish
+            the network of wormholes.
+          </small>
+          <div class="d-flex align-items-center w-100 my-4">
+            <button class="btn btn-warning text-white w-50">Button</button>
+
+            <a href="#" class="nav-link orange mx-3"
+              >Learn more <i class="fa fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-4 col-md-4 col-sm-6 d-none d-lg-flex d-md-flex d-sm-flex"
+        >
+          <div class="row">
+            <div class="col-12">
+              <img
+                src="https://images.unsplash.com/photo-1661961112835-ca6f5811d2af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-12 m-4">
+              <img
+                src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-5 col-md-4 d-none d-lg-flex d-md-flex d-sm-none">
+          <div class="row">
+            <div class="col-12 m-4">
+              <img
+                src="https://images.unsplash.com/photo-1566837945700-30057527ade0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-10">
+              <img
+                src="https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Pricing section usage of tabs-->
+    <div
+      class="container d-flex justify-content-around flex-column align-items-center"
+      id="pricing"
+    >
+      <p class="lead orange">Pricing</p>
+      <h1 class="fw-bolder">Make it yours today</h1>
+      <p>All packages come with a 30 day money back gurantee!</p>
+
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-home"
+            type="button"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+          >
+            Home
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+          >
+            Profile
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-home"
+          role="tabpanel"
+          aria-labelledby="pills-home-tab"
+          tabindex="0"
+        >
+          <div class="row d-block d-md-flex d-lg-flex g-3">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card py-4 border-1" style="width: 20rem">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2">Starter</h6>
+                  <h2 class="card-title fw-bolder">320 PLN</h2>
+                  <h6 class="card-subtitle mb-2 text-muted">miesięcznie</h6>
+                  <ul class="list-group justify-content-center m-2">
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                  </ul>
+
+                  <div class="d-flex justify-content-center align-items-center">
+                    <button class="btn btn-warning text-white btn-lg w-100">
+                      Subscription
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card py-4" style="width: 20rem">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2">Normal</h6>
+                  <h2 class="card-title fw-bolder">450 PLN</h2>
+                  <h6 class="card-subtitle mb-2 text-muted">miesięcznie</h6>
+                  <ul class="list-group justify-content-center m-2">
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                  </ul>
+
+                  <div class="d-flex justify-content-center align-items-center">
+                    <button class="btn btn-warning text-white btn-lg w-100">
+                      Subscription
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card py-4" style="width: 20rem">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2">Premium</h6>
+                  <h2 class="card-title fw-bolder">650 PLN</h2>
+                  <h6 class="card-subtitle mb-2 text-muted">miesięcznie</h6>
+                  <ul class="list-group justify-content-center m-2">
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                  </ul>
+
+                  <div class="d-flex justify-content-center align-items-center">
+                    <button class="btn btn-warning text-white btn-lg w-100">
+                      Subscription
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="pills-profile"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+          tabindex="0"
+        >
+          <div class="row d-sm-block d-md-flex d-lg-flex g-3">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card py-4 border-1" style="width: 20rem">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2">Starter</h6>
+                  <h2 class="card-title fw-bold fw-bolder">3200 PLN</h2>
+                  <h6 class="card-subtitle mb-2 text-muted">rocznie</h6>
+                  <ul class="list-group justify-content-center m-2">
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                  </ul>
+
+                  <div class="d-flex justify-content-center align-items-center">
+                    <button class="btn btn-warning text-white btn-lg w-100">
+                      Subscription
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card py-4" style="width: 20rem">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2">Normal</h6>
+                  <h2 class="card-title fw-bolder">4500 PLN</h2>
+                  <h6 class="card-subtitle mb-2 text-muted">rocznie</h6>
+                  <ul class="list-group justify-content-center m-2">
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                  </ul>
+
+                  <div class="d-flex justify-content-center align-items-center">
+                    <button class="btn btn-warning text-white btn-lg w-100">
+                      Subscription
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card py-4" style="width: 20rem">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2">Premium</h6>
+                  <h2 class="card-title fw-bolder">6500 PLN</h2>
+                  <h6 class="card-subtitle mb-2 text-muted">rocznie</h6>
+                  <ul class="list-group justify-content-center m-2">
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                    <li class="list-group-item border-0 p-2 m-2">
+                      <i class="fa fa-check"></i> Single domain
+                    </li>
+                  </ul>
+
+                  <div class="d-flex justify-content-center align-items-center">
+                    <button class="btn btn-warning text-white btn-lg w-100">
+                      Subscription
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="my-5">
+        <small>Prices above do not include VAT</small>
+      </p>
+    </div>
+
+    <!--Gallery section slider-->
+    <div class="container" id="gallery">
+      <p class="text-warning">Amet is samet</p>
+      <h3 class="fw-bold">Gallery</h3>
+
+      <div class="row justify-content-between my-3 g-4">
+        <a
+          class="col-md-6 col-sm-12 col-lg-6 img-fluid"
+          href="/assets/Empire-Flippers-an-online-business-marketplace.webp"
+          data-toggle="lightbox"
+          data-gallery="photo-gallery"
+        >
+          <img
+            src="/assets/Empire-Flippers-an-online-business-marketplace.webp"
+            class="img-fluid"
+          />
+        </a>
+        <a
+          class="col-md-6 col-sm-12 col-lg-6 img-fluid"
+          href="/assets/og_de_stage_tv06275_home.jpg"
+          data-toggle="lightbox"
+          data-gallery="photo-gallery"
+        >
+          <img class="img-fluid" src="/assets/og_de_stage_tv06275_home.jpg" />
+        </a>
+      </div>
+    </div>
+
+    <!--Footer section-->
+    <div
+      class="container-fluid bg-dark p-5 d-flex flex-column flex-sm-column flex-md-column flex-lg-row justify-content-lg-around justify-content-md-between justify-content-sm-between align-items-center"
+    >
+      <a href="#" class="navbar-brand">
+        <img
+          src="/assets/1648814513469-removebg-preview-removebg-preview.png"
+          alt="logo-img"
+          width="75"
+          height="75"
+        />
+      </a>
+
+      <div class="nav">
+        <a href="#" class="nav-link text-white">Link</a>
+        <a href="#" class="nav-link text-white">Link</a>
+        <a href="#" class="nav-link text-white">Link</a>
+        <a href="#" class="nav-link text-white">Link</a>
+        <a href="#" class="nav-link text-white">Link</a>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+  </body>
+</html>
